@@ -1,0 +1,108 @@
+#
+#	GPL vRelease licence
+#
+#	kREproxy project (C) Marcin Tomasik 2009
+#
+#	<marcin[at]tomasik.pl>
+#
+#	http://kreproxy.sourceforge.net/
+#
+
+	1. About
+	2. Configuration
+		2.1 Configuration entry
+		2.2 Default entry
+		2.2 Main configuration 
+	3. Installation
+		3.1 Requiments
+		3.2 Compilation
+		3.3 Info
+		3.4 Starting/Stopping
+	4. Responsibility
+
+
+	1. About
+	========
+		kREproxy - kernel reverse proxy server is a very simple proxy
+		server of http protocol which use simple configuration to decide
+		where pass the http requests. kREproxy server works in linux kernel
+		spaca as kernel module. This gives ability to be faster than user space's
+		revers proxy solutions.                
+
+	2. Configuration
+	================
+		To configure kREproxy server we have to change it code. This
+		is not confortable but it's enough to start.
+		Some configuration is in kre_options.h file, and kre_main.c.
+		
+		2.1 Configuration entry
+		=======================
+			Configuration entry is a pattern which kREproxy can interpret
+			and bind with appropriate destination server.
+			
+			Example of one entry.
+			URI				hostname			destination ip		dst port
+			"/*"           			"example.com" 		=>      127.0.0.1		8080
+
+			The above tells kREproxy that if client send simple request GET/POST like 
+				GET /example HTTP/1.1
+				Host: example.com
+			kREproxy pass this request to the destination HTTP server like this 
+				127.0.0.1:8080 host
+			That is all. For this experiment it's enough.
+
+		2.2 Default entry
+		=================
+			Default entry consists only of 
+				*) destination ip addres 
+				*) destination port
+			
+			Example of default entry
+			""				""					=> 192.168.0.2 		80
+
+			It's match all types of requests, and it's simple enough.
+
+		2.3 Main configuration
+		======================
+			Main configuration of kREproxy consists of minimum default entry.
+			In most popular case we must add some "Configuration entries" and 
+			one "Default entry" in the end of config. 
+
+			Configuration example:
+			"/*" 			"example-one.com"	=> 127.0.0.1 		8080
+			"/some/path"	        "example-one.com"	=> 192.168.0.2		80
+			"/*"			"example-two.org"	=> 192.168.0.3		80
+			"/image/*"		"image.examp.org"	=> 192.168.0.4		80
+			"/video/*"		"example-two.org"	=> 192.168.0.4		80
+			""				""					=> 192.168.0.10		80
+
+			We can add configuration entries in kre_main.c file. There are some examples of
+			how can you do this in kre_main.c
+
+	3. Installation
+	===============
+		3.1 Requirments
+		===============
+			This software should be work on 2.6.* kernels but it tested only
+			on 2.6.18
+
+		3.2 Compilation
+		===============
+			Compilation is as simple as posible. You must type
+			# make
+
+		3.3 Info
+		========
+			Display avalible make parameters.
+			# make about
+
+		3.3 Starting/Stopping
+		=====================
+			# make start
+			# make stop	
+	
+	4. Responsibility
+	=================
+		The author does not take any responsibility for any problem or errors which can
+		damage system or hardware. You are using this software in your own responsibility and risk.
+		
