@@ -41,8 +41,8 @@
 			and bind with appropriate destination server.
 			
 			Example of one entry.
-			URI				hostname			destination ip		dst port
-			"/*"           			"example.com" 		=>      127.0.0.1		8080
+			UR	hostname		destination ip		dst port
+			"/*"	"example.com"	=>	127.0.0.1		8080
 
 			The above tells kREproxy that if client send simple request GET/POST like 
 				GET /example HTTP/1.1
@@ -58,7 +58,7 @@
 				*) destination port
 			
 			Example of default entry
-			""				""					=> 192.168.0.2 		80
+			""	""		=>	192.168.0.2		80
 
 			It's match all types of requests, and it's simple enough.
 
@@ -74,7 +74,7 @@
 			"/*"			"example-two.org"	=> 192.168.0.3		80
 			"/image/*"		"image.examp.org"	=> 192.168.0.4		80
 			"/video/*"		"example-two.org"	=> 192.168.0.4		80
-			""				""					=> 192.168.0.10		80
+			""			""			=> 192.168.0.10		80
 
 			We can add configuration entries in kre_main.c file. There are some examples of
 			how can you do this in kre_main.c
