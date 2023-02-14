@@ -1,9 +1,9 @@
 /*
- *  GPL vRelease licence
+ *  GPL v3.0 license
  *  
  *  kREproxy project (C) Marcin Tomasik 2009
  *
- *  <marcin.tomasik.priv[onserver]gmail.com>
+ *  <marcin[at]tomasik.pl>
  *  
  *  http://kreproxy.sourceforge.net/
  *
@@ -348,7 +348,7 @@ static void __exit kre_exit(void)
 
 /* module info */
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Marcin Tomasik <marcin.tomasik.priv[onserver]gmail.com>");
+MODULE_AUTHOR("Marcin Tomasik <marcin[at]tomasik.pl>");
 MODULE_DESCRIPTION("kREproxy - simple reverse proxy [kreproxy.sourceforge.net]");
 MODULE_VERSION( MOD_VER );
 

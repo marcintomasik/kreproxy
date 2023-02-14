@@ -1,5 +1,5 @@
 #
-#	GPL vRelease licence
+#	GPL v3.0 license
 #
 #	kREproxy project (C) Marcin Tomasik 2009
 #
