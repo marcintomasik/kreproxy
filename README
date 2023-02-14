@@ -41,7 +41,7 @@
 			and bind with appropriate destination server.
 			
 			Example of one entry.
-			UR	hostname		destination ip		dst port
+			URI	hostname		destination ip		dst port
 			"/*"	"example.com"	=>	127.0.0.1		8080
 
 			The above tells kREproxy that if client send simple request GET/POST like 
@@ -58,6 +58,7 @@
 				*) destination port
 			
 			Example of default entry
+			URI	hostname		dst ip			dst port
 			""	""		=>	192.168.0.2		80
 
 			It's match all types of requests, and it's simple enough.
