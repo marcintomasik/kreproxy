@@ -26,8 +26,8 @@
 		kREproxy - kernel reverse proxy server is a very simple proxy
 		server of http protocol which use simple configuration to decide
 		where pass the http requests. kREproxy server works in linux kernel
-		spaca as kernel module. This gives ability to be faster than user space's
-		revers proxy solutions.                
+		spaca as kernel module. This gives ability to be faster than user space
+		reverse proxy solutions.                
 
 	2. Configuration
 	================
