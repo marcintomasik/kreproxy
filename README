@@ -31,8 +31,8 @@
 
 	2. Configuration
 	================
-		To configure kREproxy server we have to change it code. This
-		is not confortable but it's enough to start.
+		To configure kREproxy server we have to change it code. This is 
+		not comfortable but it's enough for that Master Thesis project.
 		Some configuration is in kre_options.h file, and kre_main.c.
 		
 		2.1 Configuration entry
@@ -84,12 +84,11 @@
 	===============
 		3.1 Requirments
 		===============
-			This software should be work on 2.6.* kernels but it tested only
-			on 2.6.18
+			This software should work on 2.6.* kernels but it tested only on 2.6.18
 
 		3.2 Compilation
 		===============
-			Compilation is as simple as posible. You must type
+			Compilation is as simple as posible. You can just type:
 			# make
 
 		3.3 Info
@@ -104,6 +103,7 @@
 	
 	4. Responsibility
 	=================
-		The author does not take any responsibility for any problem or errors which can
-		damage system or hardware. You are using this software in your own responsibility and risk.
+		Kernel programing is always a little bit risky so the author does not take any responsibility 
+		for any problem or error which can damage system or hardware. You are using this software in 
+		your own responsibility and risk.
 		
